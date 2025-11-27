@@ -1,0 +1,58 @@
+# =========================
+# Visual Studio / IDE
+# =========================
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# =========================
+# .NET Build results
+# =========================
+bin/
+obj/
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# Publish output
+# =========================
+publish/
+dist/
+
+# =========================
+# OS generated files
+# =========================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# =========================
+# Environment / Secrets
+# =========================
+appsettings.Production.json
+appsettings.Staging.json
+.env
+.env.*
+
+# =========================
+# NuGet
+# =========================
+*.nupkg
+packages/
+.nuget/
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+.cache/

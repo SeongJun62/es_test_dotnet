@@ -1,0 +1,6 @@
+@EnsolTest_HostAddress = http://localhost:5223
+
+GET {{EnsolTest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
