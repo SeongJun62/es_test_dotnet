@@ -17,8 +17,10 @@ builder.Host.UseSerilog((context, services, configuration) =>
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddHttpClient();
-builder.Services.AddScoped<SendService>();
+builder.Services.AddHttpClient<SendService>(client =>
+{
+    client.Timeout = TimeSpan.FromSeconds(30);
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
