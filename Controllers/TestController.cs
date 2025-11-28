@@ -62,7 +62,7 @@ namespace EnsolTest.Controllers
         }
 
         [HttpPost("ImportClearanceReceive")]
-        public async Task<IActionResult> asyncSample([FromBody] ImportClearanceReceive request)
+        public IActionResult asyncSample([FromBody] ImportClearanceReceive request)
         {
             try
             {
