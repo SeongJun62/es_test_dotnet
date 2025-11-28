@@ -15,7 +15,7 @@ namespace EnsolTest.Dtos
         public ObjectSample? objectSample { get; set; }
         [JsonConverter(typeof(SingleArrayJsonConverter<string>))]
         public string[]? Array { get; set; }
-
+        [JsonConverter(typeof(SapDatsConverter))]
         public DateTime? datetime { get; set; }
     }
 

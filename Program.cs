@@ -1,3 +1,4 @@
+using EnsolTest.Controllers;
 using EnsolTest.Services;
 using Serilog;
 using Serilog.Enrichers.CallerInfo;
@@ -16,8 +17,15 @@ builder.Host.UseSerilog((context, services, configuration) =>
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(opt =>
+{
+    opt.JsonSerializerOptions.PropertyNamingPolicy = null;
+});
 builder.Services.AddHttpClient<SendService>(client =>
+{
+    client.Timeout = TimeSpan.FromSeconds(30);
+});
+builder.Services.AddHttpClient<TestController>(client =>
 {
     client.Timeout = TimeSpan.FromSeconds(30);
 });

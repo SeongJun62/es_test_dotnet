@@ -19,7 +19,7 @@ namespace EnsolTest.Controllers
         }
 
         [HttpPost("log")]
-        public IActionResult ReceiveSample([FromBody] SampleRequestDto request)
+        public IActionResult ReceiveSample([FromBody] ImportClearanceReceive request)
         {
             _logger.LogInformation(
                 "Received Sample: {@SampleRequestDto}", request);
